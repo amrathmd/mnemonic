@@ -67,9 +67,15 @@ url = "mailto:amrathmd.mohammed@gmail.com"
 [params.assets]
 theme_color = "#1a1a1a"
 msapplication_TileColor = "#1a1a1a"
+favicon = "favicon.png"
+favicon16x16 = "favicon.png"
+favicon32x32 = "favicon.png"
+apple_touch_icon = "favicon.png"
 
 [params.label]
-text = "Mnemonic"
+text = "Amraths Mnemonic"
+icon = "images/logo.png"                                                                                                   
+iconHeight = 28   
 
 [[menu.main]]
 name = "Blogs"
