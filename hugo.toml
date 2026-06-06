@@ -1,6 +1,6 @@
 baseURL = 'https://amrath.hugohub.com/'
 locale = 'en-us'
-title = 'Amrath second brain'
+title = "Amrath's second brain!"
 theme = 'PaperMod'
 enableRobotsTXT = true
 buildDrafts = false
@@ -67,13 +67,13 @@ url = "mailto:amrathmd.mohammed@gmail.com"
 [params.assets]
 theme_color = "#1a1a1a"
 msapplication_TileColor = "#1a1a1a"
-favicon = "favicon.png"
-favicon16x16 = "favicon.png"
-favicon32x32 = "favicon.png"
-apple_touch_icon = "favicon.png"
+favicon = "/favicon.ico"
+favicon16x16 = "/favicon-16x16.png"
+favicon32x32 = "/favicon-32x32.png"
+apple_touch_icon = "/favicon-32x32.png"
 
 [params.label]
-text = "Amraths Mnemonic"
+text = "Amrath's Mnemonic"
 icon = "images/logo.png"                                                                                                   
 iconHeight = 28   
 

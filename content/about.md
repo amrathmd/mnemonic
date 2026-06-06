@@ -26,4 +26,4 @@ This site is my public notebook — it holds blog posts where I go deep on topic
 - LinkedIn: [mohammedamrath](https://www.linkedin.com/in/mohammed-amrath-013532247/)
 - X: [amrathmd](https://x.com/amrathmd)
 
-`Note: I'll start posting here on all accounts my learnings`
+`Note: I'll start posting my learnings in all my accounts shortly!`
