@@ -1,0 +1,96 @@
+{{- define "main" }}
+
+<div class="profile">
+  {{- with site.Params.profileMode }}
+  <div class="profile_inner">
+    {{- if .imageUrl }}
+    <img draggable="false" src="{{ .imageUrl | absURL }}"
+        alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
+        height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
+    {{- end }}
+    <h1>{{ .title | default site.Title | markdownify }}</h1>
+    {{- with .description }}<p class="description">{{ . | markdownify }}</p>{{- end }}
+    <span>{{ .subtitle | markdownify }}</span>
+    {{- partial "social_icons.html" . -}}
+    {{- with .buttons }}
+    <div class="buttons">
+      {{- range . }}
+      <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
+        <span class="button-inner">{{ .name }}</span>
+      </a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+  {{- end }}
+</div>
+
+{{/* ── About ────────────────────────────────────────────────────────── */}}
+{{- if .Content }}
+<div class="home-about">
+  {{ .Content }}
+</div>
+{{- end }}
+
+{{/* ── Skills Blocks ───────────────────────────────────────────────── */}}
+{{- if .Params.skills }}
+<section class="skills-section">
+  <h2 class="section-heading">Skills &amp; Technologies</h2>
+  <div class="skills-grid">
+    {{- range .Params.skills }}
+    <div class="skill-card">
+      <div class="skill-card-title">{{ .category }}</div>
+      <div class="skill-tags">
+        {{- range .items }}
+        <span class="skill-tag">{{ . }}</span>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{/* ── Recent Writing ──────────────────────────────────────────────── */}}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- if $pages }}
+<section class="recent-section">
+  <h2 class="section-heading">Recent Writing</h2>
+  {{- $paginator := .Paginate $pages }}
+  {{- range $paginator.Pages }}
+  <article class="post-entry">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">{{ .Title }}</h2>
+    </header>
+    {{- if ne (.Param "hideSummary") true }}
+    <div class="entry-content">
+      <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+    </div>
+    {{- end }}
+    <footer class="entry-footer">
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      {{- if eq .Type "notes" }}&nbsp;·&nbsp;<span class="note-label">note</span>{{- end }}
+      {{- with .Params.tags }}&nbsp;·&nbsp;
+        {{- range . }}<a href="{{ "/tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a>&thinsp;{{- end }}
+      {{- end }}
+    </footer>
+    <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+  </article>
+  {{- end }}
+  {{- if gt $paginator.TotalPages 1 }}
+  <footer class="page-footer">
+    <nav class="pagination">
+      {{- if $paginator.HasPrev }}
+      <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">«&nbsp;Prev</a>
+      {{- end }}
+      {{- if $paginator.HasNext }}
+      <a class="next" href="{{ $paginator.Next.URL | absURL }}">Next&nbsp;»</a>
+      {{- end }}
+    </nav>
+  </footer>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- end }}

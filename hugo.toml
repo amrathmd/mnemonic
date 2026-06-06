@@ -1,0 +1,92 @@
+baseURL = 'https://amrath.hugohub.com/'
+locale = 'en-us'
+title = 'Amrath second brain'
+theme = 'PaperMod'
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+paginate = 10
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = false
+    style = 'github-dark'
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+env = "production"
+description = "Personal blog, notes, and research — software, systems, and ideas"
+keywords = ["blog", "notes", "software", "engineering"]
+author = "Mohammed Amrath"
+defaultTheme = "dark"
+disableThemeToggle = true
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowRssButtonInSectionTermList = true
+ShowToc = true
+TocOpen = false
+comments = false
+mainSections = ["posts", "notes"]
+disableSpecial1stPost = true
+
+[params.profileMode]
+enabled = true
+title = "Mohammed Amrath"
+description = "Hobbyist Engineer. Building things on the internet. I write about software engineering, systems design, and whatever I'm learning at the moment."
+subtitle = "Site Reliability · Software  · Engineer "
+imageWidth = 0
+imageHeight = 0
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/amrathmd"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/mohammed-amrath-013532247/"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://twitter.com/amrathmd"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:amrathmd.mohammed@gmail.com"
+
+[params.assets]
+theme_color = "#1a1a1a"
+msapplication_TileColor = "#1a1a1a"
+
+[params.label]
+text = "Mnemonic"
+
+[[menu.main]]
+name = "Blogs"
+url = "/posts/"
+weight = 1
+
+[[menu.main]]
+name = "Notes"
+url = "/notes/"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 3
+
+[[menu.main]]
+name = "Search"
+url = "/search/"
+weight = 4
