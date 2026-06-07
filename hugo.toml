@@ -1,4 +1,4 @@
-baseURL = 'https://amrath.hugohub.com/'
+baseURL = 'https://blog.madmanamrath.xyz/'
 locale = 'en-us'
 title = "Amrath's second brain!"
 theme = 'PaperMod'
