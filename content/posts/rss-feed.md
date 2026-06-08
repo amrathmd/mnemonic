@@ -1,8 +1,8 @@
 ---
-title: "RSS feed - how will RSS be helpful past, present and the future."
+title: "RSS feed - Why I'm using it."
 date: 2026-06-08
 draft: false
-description: "Wished there should be a place where people won't bother to come to my website and see what posts, updates coming in but able to be notified somehow."
+description: "Protocol where people won't go crazy to share personal info."
 tags: ["learning", "dig-deeper"]
 categories: ["technology"]
 ShowToc: true
@@ -25,26 +25,29 @@ But why would someone share there personal information to me, too nerdy right. S
 
 Let me call it a protocol(yeah it's a protocol) [RFC5005](https://datatracker.ietf.org/doc/html/rfc5005) outlines the different syndications using sliding window solution to save bandwidth of network and read content on the web easy peezy.
 
-So let's you want to read blogs(could be podcasts, news, publications) from multiple sites say it netflix engineering, linkedin engineering blogs, NDTV news , Google podcasts etc. You can't track what changes are made everytime going there and checking.
+Let say you want to read blogs(could be podcasts, news, publications) from multiple sites netflix engineering, linkedin engineering blogs, NDTV news , Google podcasts etc. You can't track what changes are made everytime, only way is going there and check which is little difficult to track.
 
-These blog sites , podcasters use RSS protocol which intern generates a computer readable format(specificall xml document).
-Where you can use an RSS aggregator similar to [this](https://chromewebstore.google.com/detail/the-rss-aggregator/ffhafkagcdhnhamiaecajogjcfgienom?hl=en&pli=1) to get all your updates to your browser without tracking them individually.
+These blog sites, podcasters use RSS protocol which intern generates a computer readable format(specificall xml document).
+Where you can use an RSS aggregator similar to [this](https://chromewebstore.google.com/detail/the-rss-aggregator/ffhafkagcdhnhamiaecajogjcfgienom?hl=en&pli=1) to get all your updates to your browser/app(RSS aggregator) ex:[feeder](https://feeder.co) without tracking them individually.
 
-`You can see my RSS xml [here](https://blog.madmanamrath.xyz/index.xml). Just go to the above aggreator and in add feed section paste the my RSS xml link, you will able to add my feed there. And see if your favourite blogger Rocky is using RSS feed so that you can add it too.`
+`You can see my RSS xml [here](https://blog.madmanamrath.xyz/index.xml). Just go to the above aggreator and in add feed section paste the my RSS xml link, you will able to add my blogs feed there. And just search if your favourite blogger cky is using RSS feed so that you can add it too.`
 
 ## There is a catch in here.
 
-RSS cannot have data exceeding 150KB, but how the heck does podcasts comes to RSS feed aggregator. They won't share the whole link in aggregator they just share the link in RSS xml data.
+RSS cannot have data exceeding 150KB, but how the heck does podcasts comes to RSS feed aggregator. They won't share the whole video but a link to the video in RSS xml data.
 
 There are search engines similar to google podcast built on top of these podcasts RSS data. Some BitTorrent clients support RSS. RSS feeds which provide links to .torrent files allow users to subscribe and automatically download content as soon as it is published.
 
 After 2010 the use has reduced dramatically and mac OS support started reducing for RSS. Windows, Android, all browsers support RSS till date.
 
-There were papers published quoting 'Its time to bring back RSS' during social media times.
+There were papers published quoting 'Its time to bring back RSS' during social media times got alot of debate around this and requires a little research to understand this.
 
 ## But why I'm using it
 
-Thought it to a cheaper solution and won't bother users to share their personal details or track them. Let me know if I can some other solution as well. Will post the credits here!
+Thought it to a cheaper solution and won't bother users to share their personal details or track them. Let me know if I can use some other solution as well.
+`Note: Will post the credits here!
+`
+I made a small poc to build a new's letter around this which is cost inducing and need personal info of the user which now I don't want to take in. I feel everything I'm writing is more for me(Sorry!).If this writing adds value I'm more happy.
 
 ## How about AI agents or bots using RSS.
 
